@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Java SE必知必会2 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="概述&amp;ensp;&amp;ensp; 我们接着上一次的分析，继续来探讨Java SE中的基础且重要的问题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java SE必知必会2">
+<meta property="og:url" content="http://yoursite.com/2020/03/09/Java-SE必知必会2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="概述&amp;ensp;&amp;ensp; 我们接着上一次的分析，继续来探讨Java SE中的基础且重要的问题。">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-03-09T05:03:51.451Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Java SE必知必会2">
+<meta name="twitter:description" content="概述&amp;ensp;&amp;ensp; 我们接着上一次的分析，继续来探讨Java SE中的基础且重要的问题。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -152,16 +156,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Java-SE必知必会2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Java-SE必知必会2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/09/Java-SE必知必会2/">Java SE必知必会2</a>
+    <h1 class="article-title" itemprop="name">
+      Java SE必知必会2
     </h1>
   
 
@@ -174,12 +176,71 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="ensp-ensp-我们接着上一次的分析，继续来探讨Java-SE中的基础且重要的问题。"><a href="#ensp-ensp-我们接着上一次的分析，继续来探讨Java-SE中的基础且重要的问题。" class="headerlink" title="&ensp;&ensp; 我们接着上一次的分析，继续来探讨Java SE中的基础且重要的问题。"></a>&ensp;&ensp; 我们接着上一次的分析，继续来探讨Java SE中的基础且重要的问题。</h3>
-        
-          <a class="article-more-a" href="/2020/03/09/Java-SE必知必会2/#more">more >></a>
-        
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="ensp-ensp-我们接着上一次的分析，继续来探讨Java-SE中的基础且重要的问题。"><a href="#ensp-ensp-我们接着上一次的分析，继续来探讨Java-SE中的基础且重要的问题。" class="headerlink" title="&ensp;&ensp; 我们接着上一次的分析，继续来探讨Java SE中的基础且重要的问题。"></a>&ensp;&ensp; 我们接着上一次的分析，继续来探讨Java SE中的基础且重要的问题。</h3><a id="more"></a> 
+<blockquote>
+<p>1)比较方法重载(overloading)和方法重写(override) </p>
+</blockquote>
+<h3 id="ensp-ensp-1-方法重载：两同一不同。即同类、方法名相同；参数列表不同。"><a href="#ensp-ensp-1-方法重载：两同一不同。即同类、方法名相同；参数列表不同。" class="headerlink" title="&ensp;&ensp; (1) 方法重载：两同一不同。即同类、方法名相同；参数列表不同。"></a>&ensp;&ensp; (1) 方法重载：两同一不同。即同类、方法名相同；参数列表不同。</h3><h3 id="ensp-ensp-2-方法重写-覆写-：一同两小一大。即父类方法和子类方法的方法签名-方法名-参数列表-相同；子类的返回值类型比父类的返回值类型更小或相等；子类声明方法抛出的异常比父类方法声明抛出的异常更小或相等；子类方法的访问权限比父类更大或相等。"><a href="#ensp-ensp-2-方法重写-覆写-：一同两小一大。即父类方法和子类方法的方法签名-方法名-参数列表-相同；子类的返回值类型比父类的返回值类型更小或相等；子类声明方法抛出的异常比父类方法声明抛出的异常更小或相等；子类方法的访问权限比父类更大或相等。" class="headerlink" title="&ensp;&ensp; (2) 方法重写(覆写)：一同两小一大。即父类方法和子类方法的方法签名(方法名+参数列表)相同；子类的返回值类型比父类的返回值类型更小或相等；子类声明方法抛出的异常比父类方法声明抛出的异常更小或相等；子类方法的访问权限比父类更大或相等。"></a>&ensp;&ensp; (2) 方法重写(覆写)：一同两小一大。即父类方法和子类方法的方法签名(方法名+参数列表)相同；子类的返回值类型比父类的返回值类型更小或相等；子类声明方法抛出的异常比父类方法声明抛出的异常更小或相等；子类方法的访问权限比父类更大或相等。</h3><h3 id="ensp-ensp-注：私有方法不能被覆写，静态方法页不能被覆写-因为方法的重写和对象有关，而ststic修饰的方法和对象无关-。"><a href="#ensp-ensp-注：私有方法不能被覆写，静态方法页不能被覆写-因为方法的重写和对象有关，而ststic修饰的方法和对象无关-。" class="headerlink" title="&ensp;&ensp; 注：私有方法不能被覆写，静态方法页不能被覆写(因为方法的重写和对象有关，而ststic修饰的方法和对象无关)。"></a>&ensp;&ensp; 注：私有方法不能被覆写，静态方法页不能被覆写(因为方法的重写和对象有关，而ststic修饰的方法和对象无关)。</h3><blockquote>
+<p>2)子类和父类之间类型转换问题</p>
+</blockquote>
+<h3 id="ensp-ensp-1-向上转型：子类–-gt-父类，自动完成。Person-p-new-Boy"><a href="#ensp-ensp-1-向上转型：子类–-gt-父类，自动完成。Person-p-new-Boy" class="headerlink" title="&ensp;&ensp; (1) 向上转型：子类–&gt;父类，自动完成。Person p = new Boy();"></a>&ensp;&ensp; (1) 向上转型：子类–&gt;父类，自动完成。Person p = new Boy();</h3><h3 id="ensp-ensp-2-向下转型：父类–-gt-子类，强制完成。Boy-boy-Boy-person"><a href="#ensp-ensp-2-向下转型：父类–-gt-子类，强制完成。Boy-boy-Boy-person" class="headerlink" title="&ensp;&ensp; (2) 向下转型：父类–&gt;子类，强制完成。Boy boy = (Boy)person;"></a>&ensp;&ensp; (2) 向下转型：父类–&gt;子类，强制完成。Boy boy = (Boy)person;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">  public void eat()&#123;</span><br><span class="line">    System.out.println(&quot;person&quot;); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Boy extends Person&#123;</span><br><span class="line">   public void eat()&#123;</span><br><span class="line">     System.out.println(&quot;boy&quot;); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">  public static void main(String[] args)&#123;</span><br><span class="line">     Person person = new Boy();//向上转型</span><br><span class="line">     Boy boy = (Boy)person;//向下转型</span><br><span class="line">     boy.eat();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>3)关于instanceof</p>
+</blockquote>
+<h3 id="ensp-ensp-一般我们在执行向下转型之前要先判断父类对象是否为子类对象的实例。格式：对象-instanceof-类名"><a href="#ensp-ensp-一般我们在执行向下转型之前要先判断父类对象是否为子类对象的实例。格式：对象-instanceof-类名" class="headerlink" title="&ensp;&ensp; 一般我们在执行向下转型之前要先判断父类对象是否为子类对象的实例。格式：对象 instanceof 类名"></a>&ensp;&ensp; 一般我们在执行向下转型之前要先判断父类对象是否为子类对象的实例。格式：对象 instanceof 类名</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Car&#123;</span><br><span class="line">  public void show()&#123;</span><br><span class="line">    System.out.println(&quot;一般的车&quot;); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">class BMW extends Car&#123;</span><br><span class="line">  public void say()&#123;</span><br><span class="line">    System.out.println(&quot;宝马车&quot;); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Test&#123;</span><br><span class="line">  public static void main(String[] args)&#123;</span><br><span class="line">     Car c = new BMW();//如果这里直接调用c.say();是错误的，因为编译类型的变量调用不到实际类型里的方法。</span><br><span class="line">     if(c instanceof BMW)&#123;</span><br><span class="line">       BMW b = (BMW)c;</span><br><span class="line">       b.say();//输出：宝马车</span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>4)关于多态 </p>
+</blockquote>
+<h3 id="ensp-ensp-当父类对象引用子类对象时-如Person-p-new-Boy-，在这个引用变量p指向的对象中，它的成员变量与静态方法和父类一致，它的非静态方法在编译时与父类一致，运行时却与子类一致。即变量多态看左边，方法多态看右边，静态多态看左边。"><a href="#ensp-ensp-当父类对象引用子类对象时-如Person-p-new-Boy-，在这个引用变量p指向的对象中，它的成员变量与静态方法和父类一致，它的非静态方法在编译时与父类一致，运行时却与子类一致。即变量多态看左边，方法多态看右边，静态多态看左边。" class="headerlink" title="&ensp;&ensp; 当父类对象引用子类对象时(如Person p = new Boy();)，在这个引用变量p指向的对象中，它的成员变量与静态方法和父类一致，它的非静态方法在编译时与父类一致，运行时却与子类一致。即变量多态看左边，方法多态看右边，静态多态看左边。"></a>&ensp;&ensp; 当父类对象引用子类对象时(如Person p = new Boy();)，在这个引用变量p指向的对象中，它的成员变量与静态方法和父类一致，它的非静态方法在编译时与父类一致，运行时却与子类一致。即变量多态看左边，方法多态看右边，静态多态看左边。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class A&#123;</span><br><span class="line">  public int a = 0;</span><br><span class="line">  public void fun()&#123;</span><br><span class="line">    System.out.println(&quot;A&quot;); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class B extends A&#123;</span><br><span class="line">  public int a = 1;</span><br><span class="line">  public void fun()&#123;</span><br><span class="line">    System.out.println(&quot;B&quot;); </span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">      A classA = new B();</span><br><span class="line">      System.out.println(classA.a); //输出：0</span><br><span class="line">      classA.fun();//输出：B</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>5)关于Object类中的几个重要的方法</p>
+</blockquote>
+<h3 id="ensp-ensp-a-getClass-方法"><a href="#ensp-ensp-a-getClass-方法" class="headerlink" title="&ensp;&ensp; a) getClass()方法"></a>&ensp;&ensp; a) getClass()方法</h3><h4 id="ensp-ensp-public-final-Class-getClass-返回此Object的运行时类"><a href="#ensp-ensp-public-final-Class-getClass-返回此Object的运行时类" class="headerlink" title="&ensp;&ensp; public final Class getClass();返回此Object的运行时类"></a>&ensp;&ensp; public final Class getClass();返回此Object的运行时类</h4><h4 id="ensp-ensp-public-String-getName-；可以通过Class中的一个方法，获得对象的类的名称。"><a href="#ensp-ensp-public-String-getName-；可以通过Class中的一个方法，获得对象的类的名称。" class="headerlink" title="&ensp;&ensp; public String getName()；可以通过Class中的一个方法，获得对象的类的名称。"></a>&ensp;&ensp; public String getName()；可以通过Class中的一个方法，获得对象的类的名称。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args)&#123;</span><br><span class="line">   Object obj = new Object();</span><br><span class="line">   Class c1 = obj.getClass();</span><br><span class="line">   String name = c1.getName();</span><br><span class="line">   System.out.println(name);//输出：java.lang.object</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ensp-ensp-b-toString-方法"><a href="#ensp-ensp-b-toString-方法" class="headerlink" title="&ensp;&ensp; b) toString()方法"></a>&ensp;&ensp; b) toString()方法</h3><h4 id="ensp-ensp-i-打印对象时会自动调用toString-方法。"><a href="#ensp-ensp-i-打印对象时会自动调用toString-方法。" class="headerlink" title="&ensp;&ensp; i)打印对象时会自动调用toString()方法。"></a>&ensp;&ensp; i)打印对象时会自动调用toString()方法。</h4><h4 id="ensp-ensp-ii-public-String-toString-返回该对象的字符串表示。"><a href="#ensp-ensp-ii-public-String-toString-返回该对象的字符串表示。" class="headerlink" title="&ensp;&ensp; ii) public String toString();返回该对象的字符串表示。"></a>&ensp;&ensp; ii) public String toString();返回该对象的字符串表示。</h4><h4 id="ensp-ensp-iii-在实际开发中通常要重写toString-方法。"><a href="#ensp-ensp-iii-在实际开发中通常要重写toString-方法。" class="headerlink" title="&ensp;&ensp; iii)在实际开发中通常要重写toString()方法。"></a>&ensp;&ensp; iii)在实际开发中通常要重写toString()方法。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class ObjectInstance&#123;</span><br><span class="line">  public String toString()&#123;//重写toString()方法</span><br><span class="line">    return getClass().getName();</span><br><span class="line">  &#125;</span><br><span class="line">  public static void main(String[] args)&#123;</span><br><span class="line">    System.out.println(new ObjectInstance());//打印本类对象//输出：ObjectInstance</span><br><span class="line">    //new ObjectInstance()就相当于new ObjectInstance()。toString(),因为打印对象时会自动调用toString()方法。</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ensp-ensp-c-equals-方法"><a href="#ensp-ensp-c-equals-方法" class="headerlink" title="&ensp;&ensp; c) equals()方法"></a>&ensp;&ensp; c) equals()方法</h3><h4 id="ensp-ensp-i-public-boolean-equals-判断两个对象是否“相等”。"><a href="#ensp-ensp-i-public-boolean-equals-判断两个对象是否“相等”。" class="headerlink" title="&ensp;&ensp; i)  public boolean equals();判断两个对象是否“相等”。"></a>&ensp;&ensp; i)  public boolean equals();判断两个对象是否“相等”。</h4><h4 id="ensp-ensp-ii-equals-方法默认比较的是对象的引用地址是否相等，而不是比较对象的内容。由于比较对象的引用在实际开发中没有意义，所以需要我们重写该方法。-String类和Integer类就重写了该方法-。"><a href="#ensp-ensp-ii-equals-方法默认比较的是对象的引用地址是否相等，而不是比较对象的内容。由于比较对象的引用在实际开发中没有意义，所以需要我们重写该方法。-String类和Integer类就重写了该方法-。" class="headerlink" title="&ensp;&ensp; ii) equals()方法默认比较的是对象的引用地址是否相等，而不是比较对象的内容。由于比较对象的引用在实际开发中没有意义，所以需要我们重写该方法。(String类和Integer类就重写了该方法)。"></a>&ensp;&ensp; ii) equals()方法默认比较的是对象的引用地址是否相等，而不是比较对象的内容。由于比较对象的引用在实际开发中没有意义，所以需要我们重写该方法。(String类和Integer类就重写了该方法)。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args)&#123;</span><br><span class="line">  System.out.println(new Integer(1).equals(new Integer(1)));//true</span><br><span class="line">  System.out.println(new Object().equals(new Object()));//false</span><br><span class="line">  System.out.println(new String() == new String());//false</span><br><span class="line">  System.out.println(new String().equals(new String()));//true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ensp-ensp-总结："><a href="#ensp-ensp-总结：" class="headerlink" title="&ensp;&ensp; 总结："></a>&ensp;&ensp; 总结：</h3><h3 id="ensp-ensp-“-”既可以比较基本数据类型，也可以比较引用数据类型。基本数据类型比较的是值，而引用数据类型比较的是地址。equals-只能比较引用数据类型，所有的对象都会继承Object类中的方法。如果该类中没有重写Object类中的equals-方法，那么它和”-”比较的引用数据类型没有区别，重写后的equals-方法比较的是对象中的属性。"><a href="#ensp-ensp-“-”既可以比较基本数据类型，也可以比较引用数据类型。基本数据类型比较的是值，而引用数据类型比较的是地址。equals-只能比较引用数据类型，所有的对象都会继承Object类中的方法。如果该类中没有重写Object类中的equals-方法，那么它和”-”比较的引用数据类型没有区别，重写后的equals-方法比较的是对象中的属性。" class="headerlink" title="&ensp;&ensp; “==”既可以比较基本数据类型，也可以比较引用数据类型。基本数据类型比较的是值，而引用数据类型比较的是地址。equals()只能比较引用数据类型，所有的对象都会继承Object类中的方法。如果该类中没有重写Object类中的equals()方法，那么它和”==”比较的引用数据类型没有区别，重写后的equals()方法比较的是对象中的属性。"></a>&ensp;&ensp; “==”既可以比较基本数据类型，也可以比较引用数据类型。基本数据类型比较的是值，而引用数据类型比较的是地址。equals()只能比较引用数据类型，所有的对象都会继承Object类中的方法。如果该类中没有重写Object类中的equals()方法，那么它和”==”比较的引用数据类型没有区别，重写后的equals()方法比较的是对象中的属性。</h3><blockquote>
+<p>6)数据类型转换：</p>
+</blockquote>
+<h3 id="ensp-ensp-1-隐式：小—-gt-大，自动执行。float-f-123L"><a href="#ensp-ensp-1-隐式：小—-gt-大，自动执行。float-f-123L" class="headerlink" title="&ensp;&ensp; 1) 隐式：小—&gt;大，自动执行。float f = 123L;"></a>&ensp;&ensp; 1) 隐式：小—&gt;大，自动执行。float f = 123L;</h3><h3 id="ensp-ensp-2-显式：大—-gt-小，强制执行，但可能会导致精度损失。"><a href="#ensp-ensp-2-显式：大—-gt-小，强制执行，但可能会导致精度损失。" class="headerlink" title="&ensp;&ensp; 2) 显式：大—&gt;小，强制执行，但可能会导致精度损失。"></a>&ensp;&ensp; 2) 显式：大—&gt;小，强制执行，但可能会导致精度损失。</h3><h4 id="ensp-ensp-int-a-int-45-23-此时输出a的值为45。"><a href="#ensp-ensp-int-a-int-45-23-此时输出a的值为45。" class="headerlink" title="&ensp;&ensp; int a = (int)45.23;此时输出a的值为45。"></a>&ensp;&ensp; int a = (int)45.23;此时输出a的值为45。</h4><h4 id="ensp-ensp-int-b-int-’d’-此时输出的值为100。"><a href="#ensp-ensp-int-b-int-’d’-此时输出的值为100。" class="headerlink" title="&ensp;&ensp; int b = (int)’d’;此时输出的值为100。"></a>&ensp;&ensp; int b = (int)’d’;此时输出的值为100。</h4><h3 id="ensp-ensp-注：char、byte、short-lt-int-lt-long-lt-float-lt-double"><a href="#ensp-ensp-注：char、byte、short-lt-int-lt-long-lt-float-lt-double" class="headerlink" title="&ensp;&ensp; 注：char、byte、short&lt;int&lt;long&lt;float&lt;double"></a>&ensp;&ensp; 注：char、byte、short&lt;int&lt;long&lt;float&lt;double</h3>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -188,16 +249,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/09/Java-SE必知必会2/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150×150&data=http://jianghongqiang.github.io/2020/03/09/Java-SE必知必会2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/09/Java-SE必知必会1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java SE必知必会1</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -212,273 +332,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java-SE必知必会1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/09/Java-SE必知必会1/">Java SE必知必会1</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/09/Java-SE必知必会1/" class="archive-article-date">
-  	<time datetime="2020-03-09T04:07:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="ensp-ensp-最近作者在总结JavaSE方面的相关知识点时，发现很多内容比较重要，面试的时候也经常会被面试官问起，但是容易被大家忽视。所以接下来我们就来一起回顾一下这方面的知识。"><a href="#ensp-ensp-最近作者在总结JavaSE方面的相关知识点时，发现很多内容比较重要，面试的时候也经常会被面试官问起，但是容易被大家忽视。所以接下来我们就来一起回顾一下这方面的知识。" class="headerlink" title="&ensp;&ensp; 最近作者在总结JavaSE方面的相关知识点时，发现很多内容比较重要，面试的时候也经常会被面试官问起，但是容易被大家忽视。所以接下来我们就来一起回顾一下这方面的知识。"></a>&ensp;&ensp; 最近作者在总结JavaSE方面的相关知识点时，发现很多内容比较重要，面试的时候也经常会被面试官问起，但是容易被大家忽视。所以接下来我们就来一起回顾一下这方面的知识。</h3>
-        
-          <a class="article-more-a" href="/2020/03/09/Java-SE必知必会1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/09/Java-SE必知必会1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-我们接着上一次的分析，继续来探讨Java-SE中的基础且重要的问题。"><span class="toc-number">1.1.</span> <span class="toc-text">   我们接着上一次的分析，继续来探讨Java SE中的基础且重要的问题。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-1-方法重载：两同一不同。即同类、方法名相同；参数列表不同。"><span class="toc-number">1.2.</span> <span class="toc-text">   (1) 方法重载：两同一不同。即同类、方法名相同；参数列表不同。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-2-方法重写-覆写-：一同两小一大。即父类方法和子类方法的方法签名-方法名-参数列表-相同；子类的返回值类型比父类的返回值类型更小或相等；子类声明方法抛出的异常比父类方法声明抛出的异常更小或相等；子类方法的访问权限比父类更大或相等。"><span class="toc-number">1.3.</span> <span class="toc-text">   (2) 方法重写(覆写)：一同两小一大。即父类方法和子类方法的方法签名(方法名+参数列表)相同；子类的返回值类型比父类的返回值类型更小或相等；子类声明方法抛出的异常比父类方法声明抛出的异常更小或相等；子类方法的访问权限比父类更大或相等。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-注：私有方法不能被覆写，静态方法页不能被覆写-因为方法的重写和对象有关，而ststic修饰的方法和对象无关-。"><span class="toc-number">1.4.</span> <span class="toc-text">   注：私有方法不能被覆写，静态方法页不能被覆写(因为方法的重写和对象有关，而ststic修饰的方法和对象无关)。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-1-向上转型：子类–-gt-父类，自动完成。Person-p-new-Boy"><span class="toc-number">1.5.</span> <span class="toc-text">   (1) 向上转型：子类–&gt;父类，自动完成。Person p = new Boy();</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-2-向下转型：父类–-gt-子类，强制完成。Boy-boy-Boy-person"><span class="toc-number">1.6.</span> <span class="toc-text">   (2) 向下转型：父类–&gt;子类，强制完成。Boy boy = (Boy)person;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-一般我们在执行向下转型之前要先判断父类对象是否为子类对象的实例。格式：对象-instanceof-类名"><span class="toc-number">1.7.</span> <span class="toc-text">   一般我们在执行向下转型之前要先判断父类对象是否为子类对象的实例。格式：对象 instanceof 类名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-当父类对象引用子类对象时-如Person-p-new-Boy-，在这个引用变量p指向的对象中，它的成员变量与静态方法和父类一致，它的非静态方法在编译时与父类一致，运行时却与子类一致。即变量多态看左边，方法多态看右边，静态多态看左边。"><span class="toc-number">1.8.</span> <span class="toc-text">   当父类对象引用子类对象时(如Person p = new Boy();)，在这个引用变量p指向的对象中，它的成员变量与静态方法和父类一致，它的非静态方法在编译时与父类一致，运行时却与子类一致。即变量多态看左边，方法多态看右边，静态多态看左边。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-a-getClass-方法"><span class="toc-number">1.9.</span> <span class="toc-text">   a) getClass()方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ensp-ensp-public-final-Class-getClass-返回此Object的运行时类"><span class="toc-number">1.9.1.</span> <span class="toc-text">   public final Class getClass();返回此Object的运行时类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ensp-ensp-public-String-getName-；可以通过Class中的一个方法，获得对象的类的名称。"><span class="toc-number">1.9.2.</span> <span class="toc-text">   public String getName()；可以通过Class中的一个方法，获得对象的类的名称。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-b-toString-方法"><span class="toc-number">1.10.</span> <span class="toc-text">   b) toString()方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ensp-ensp-i-打印对象时会自动调用toString-方法。"><span class="toc-number">1.10.1.</span> <span class="toc-text">   i)打印对象时会自动调用toString()方法。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ensp-ensp-ii-public-String-toString-返回该对象的字符串表示。"><span class="toc-number">1.10.2.</span> <span class="toc-text">   ii) public String toString();返回该对象的字符串表示。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ensp-ensp-iii-在实际开发中通常要重写toString-方法。"><span class="toc-number">1.10.3.</span> <span class="toc-text">   iii)在实际开发中通常要重写toString()方法。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-c-equals-方法"><span class="toc-number">1.11.</span> <span class="toc-text">   c) equals()方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ensp-ensp-i-public-boolean-equals-判断两个对象是否“相等”。"><span class="toc-number">1.11.1.</span> <span class="toc-text">   i)  public boolean equals();判断两个对象是否“相等”。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ensp-ensp-ii-equals-方法默认比较的是对象的引用地址是否相等，而不是比较对象的内容。由于比较对象的引用在实际开发中没有意义，所以需要我们重写该方法。-String类和Integer类就重写了该方法-。"><span class="toc-number">1.11.2.</span> <span class="toc-text">   ii) equals()方法默认比较的是对象的引用地址是否相等，而不是比较对象的内容。由于比较对象的引用在实际开发中没有意义，所以需要我们重写该方法。(String类和Integer类就重写了该方法)。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-总结："><span class="toc-number">1.12.</span> <span class="toc-text">   总结：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-“-”既可以比较基本数据类型，也可以比较引用数据类型。基本数据类型比较的是值，而引用数据类型比较的是地址。equals-只能比较引用数据类型，所有的对象都会继承Object类中的方法。如果该类中没有重写Object类中的equals-方法，那么它和”-”比较的引用数据类型没有区别，重写后的equals-方法比较的是对象中的属性。"><span class="toc-number">1.13.</span> <span class="toc-text">   “==”既可以比较基本数据类型，也可以比较引用数据类型。基本数据类型比较的是值，而引用数据类型比较的是地址。equals()只能比较引用数据类型，所有的对象都会继承Object类中的方法。如果该类中没有重写Object类中的equals()方法，那么它和”==”比较的引用数据类型没有区别，重写后的equals()方法比较的是对象中的属性。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-1-隐式：小—-gt-大，自动执行。float-f-123L"><span class="toc-number">1.14.</span> <span class="toc-text">   1) 隐式：小—&gt;大，自动执行。float f = 123L;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-2-显式：大—-gt-小，强制执行，但可能会导致精度损失。"><span class="toc-number">1.15.</span> <span class="toc-text">   2) 显式：大—&gt;小，强制执行，但可能会导致精度损失。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ensp-ensp-int-a-int-45-23-此时输出a的值为45。"><span class="toc-number">1.15.1.</span> <span class="toc-text">   int a = (int)45.23;此时输出a的值为45。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ensp-ensp-int-b-int-’d’-此时输出的值为100。"><span class="toc-number">1.15.2.</span> <span class="toc-text">   int b = (int)’d’;此时输出的值为100。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-注：char、byte、short-lt-int-lt-long-lt-float-lt-double"><span class="toc-number">1.16.</span> <span class="toc-text">   注：char、byte、short&lt;int&lt;long&lt;float&lt;double</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-有关单例模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/09/有关单例模式/">有关单例模式</a>
-    </h1>
   
 
-        
-        <a href="/2020/03/09/有关单例模式/" class="archive-article-date">
-  	<time datetime="2020-03-09T03:10:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="ensp-ensp-简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。"><a href="#ensp-ensp-简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。" class="headerlink" title="&ensp;&ensp; 简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。"></a>&ensp;&ensp; 简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。</h3>
-        
-          <a class="article-more-a" href="/2020/03/09/有关单例模式/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/09/有关单例模式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-深度解析volatile关键字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/08/深度解析volatile关键字/">深度解析volatile关键字</a>
-    </h1>
   
 
-        
-        <a href="/2020/03/08/深度解析volatile关键字/" class="archive-article-date">
-  	<time datetime="2020-03-08T14:30:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="ensp-ensp-在我们日常开发中，经常会遇到volatile关键字，那么你对这个关键字有了解多少呢？下面我们就以面试官的视角来深度解析下volatile关键字。"><a href="#ensp-ensp-在我们日常开发中，经常会遇到volatile关键字，那么你对这个关键字有了解多少呢？下面我们就以面试官的视角来深度解析下volatile关键字。" class="headerlink" title="&ensp;&ensp; 在我们日常开发中，经常会遇到volatile关键字，那么你对这个关键字有了解多少呢？下面我们就以面试官的视角来深度解析下volatile关键字。"></a>&ensp;&ensp; 在我们日常开发中，经常会遇到<code>volatile</code>关键字，那么你对这个关键字有了解多少呢？下面我们就以面试官的视角来深度解析下<code>volatile</code>关键字。</h3>
-        
-          <a class="article-more-a" href="/2020/03/08/深度解析volatile关键字/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/08/深度解析volatile关键字/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-正确书写技术词汇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/30/正确书写技术词汇/">正确书写技术词汇</a>
-    </h1>
   
 
-        
-        <a href="/2019/08/30/正确书写技术词汇/" class="archive-article-date">
-  	<time datetime="2019-08-30T13:05:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="ensp-ensp-当我们在写一份简历的时候，简历上面难免会出现很-多的技术词汇。但是不论个人博客还是个人简历很多人可能都是想当然的凭自己的印象来拼写技术词汇。如果简历上出现了错误的或者不规范的拼写，一定会给面试官留下不好的印象。"><a href="#ensp-ensp-当我们在写一份简历的时候，简历上面难免会出现很-多的技术词汇。但是不论个人博客还是个人简历很多人可能都是想当然的凭自己的印象来拼写技术词汇。如果简历上出现了错误的或者不规范的拼写，一定会给面试官留下不好的印象。" class="headerlink" title="&ensp;&ensp;  当我们在写一份简历的时候，简历上面难免会出现很 多的技术词汇。但是不论个人博客还是个人简历很多人可能都是想当然的凭自己的印象来拼写技术词汇。如果简历上出现了错误的或者不规范的拼写，一定会给面试官留下不好的印象。"></a>&ensp;&ensp;  当我们在写一份简历的时候，简历上面难免会出现很 多的技术词汇。但是不论个人博客还是个人简历很多人可能都是想当然的凭自己的印象来拼写技术词汇。如果简历上出现了错误的或者不规范的拼写，一定会给面试官留下不好的印象。</h3>
-        
-          <a class="article-more-a" href="/2019/08/30/正确书写技术词汇/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/30/正确书写技术词汇/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -501,8 +380,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
