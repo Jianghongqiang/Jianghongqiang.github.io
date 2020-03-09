@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>有关单例模式 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="概述&amp;ensp;&amp;ensp; 简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="有关单例模式">
+<meta property="og:url" content="http://yoursite.com/2020/03/09/有关单例模式/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="概述&amp;ensp;&amp;ensp; 简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-03-09T03:37:11.918Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="有关单例模式">
+<meta name="twitter:description" content="概述&amp;ensp;&amp;ensp; 简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -152,16 +156,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-有关单例模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-有关单例模式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/09/有关单例模式/">有关单例模式</a>
+    <h1 class="article-title" itemprop="name">
+      有关单例模式
     </h1>
   
 
@@ -174,12 +176,43 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="ensp-ensp-简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。"><a href="#ensp-ensp-简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。" class="headerlink" title="&ensp;&ensp; 简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。"></a>&ensp;&ensp; 简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。</h3>
-        
-          <a class="article-more-a" href="/2020/03/09/有关单例模式/#more">more >></a>
-        
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="ensp-ensp-简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。"><a href="#ensp-ensp-简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。" class="headerlink" title="&ensp;&ensp; 简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。"></a>&ensp;&ensp; 简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。</h3><a id="more"></a> 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">//1.饿汉式（静态常量）</span><br><span class="line">public class Sigleton&#123;</span><br><span class="line">    //构造器私有化</span><br><span class="line">    private Sigleton()&#123;&#125;</span><br><span class="line">    //本类内部创建对象实例</span><br><span class="line">    private final ststic Sigleton instance = new Sigleton();</span><br><span class="line">    //提供一个共有的静态方法，返回实例对象</span><br><span class="line">    public static Sigleton getInstance()&#123;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//2.饿汉式（静态代码块）</span><br><span class="line">public class Sigleton&#123;</span><br><span class="line">    //构造器私有化，使外部不能new</span><br><span class="line">    private Sigleton()&#123;&#125;</span><br><span class="line">    //本类内部创建对象实例</span><br><span class="line">    private static Sigleton instance;</span><br><span class="line">    static&#123;//在静态代码块中创建单例对象</span><br><span class="line">        instance = new Sigleton();</span><br><span class="line">    &#125;</span><br><span class="line">    //提供一个共有的静态方法，返回实例对象</span><br><span class="line">    public static Sigleton getInstance()&#123;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//3.懒汉式（线程不安全）</span><br><span class="line">public class Sigleton&#123;</span><br><span class="line">    private static Sigleton instance;</span><br><span class="line">    private Sigleton()&#123;&#125;</span><br><span class="line">    //提供一个静态的共有方法，当使用到该方法时，才会创建instance(即懒汉式)</span><br><span class="line">    public static Sigleton getInstance()&#123;</span><br><span class="line">        if(instance == null)&#123;</span><br><span class="line">          instance = new Sigleton();</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//4.懒汉式（线程安全）</span><br><span class="line">public class Sigleton&#123;</span><br><span class="line">    private static Sigleton instance;</span><br><span class="line">    private Sigleton()&#123;&#125;</span><br><span class="line">    //提供一个静态的共有方法，加入同步处理的代码，解决了线程安全问题</span><br><span class="line">    public static synchronized Sigleton getInstance()&#123;</span><br><span class="line">        if(instance == null)&#123;</span><br><span class="line">           instance = new Sigleton();</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//5.双重检查</span><br><span class="line">public class Sigleton&#123;</span><br><span class="line">    private static volatice Sigleton getInstance;</span><br><span class="line">    private Sigleton()&#123;&#125;</span><br><span class="line">    //提供一个静态的公有方法，加入双重检查代码，解决线程安全问题和懒加载问题，同时保证了效率</span><br><span class="line">    public static synchronized Singleton getInstance()&#123;</span><br><span class="line">        if(instance == null)&#123;</span><br><span class="line">          synchronized(Singleton.class)&#123;</span><br><span class="line">             if(instance == null)&#123;</span><br><span class="line">                instance = new Singleton();</span><br><span class="line">             &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//6.静态内部类</span><br><span class="line">public class Sigleton&#123;</span><br><span class="line">    private static volatice Sigleton getInstance;</span><br><span class="line">    private Sigleton()&#123;&#125;</span><br><span class="line">    //写一个静态内部类，该类中有一个静态属性Sigleton</span><br><span class="line">    private static class SingletonInstance&#123;</span><br><span class="line">       private static final Singleton INSTANCE = new instance();</span><br><span class="line">    &#125;</span><br><span class="line">    //提供一个静态的公有方法，直接返回SingletonInstance.INSTANCE</span><br><span class="line">    public static synchronized Singleton getInstance()&#123;</span><br><span class="line">        return SingletonInstance.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//7.枚举</span><br><span class="line">enum Singleton&#123;</span><br><span class="line">    Instance;</span><br><span class="line">    public void updateInstance()&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><h3 id="ensp-ensp-1-对于饿汉式（静态常量）：这种方法写法简单，在类装载的时候就完成实例化，避免了线程同步的问题。但是它没有达到懒加载的效果，即如果从始至终从未使用过这个实例，会造成资源浪费。"><a href="#ensp-ensp-1-对于饿汉式（静态常量）：这种方法写法简单，在类装载的时候就完成实例化，避免了线程同步的问题。但是它没有达到懒加载的效果，即如果从始至终从未使用过这个实例，会造成资源浪费。" class="headerlink" title="&ensp;&ensp; 1.对于饿汉式（静态常量）：这种方法写法简单，在类装载的时候就完成实例化，避免了线程同步的问题。但是它没有达到懒加载的效果，即如果从始至终从未使用过这个实例，会造成资源浪费。"></a>&ensp;&ensp; 1.对于饿汉式（静态常量）：这种方法写法简单，在类装载的时候就完成实例化，避免了线程同步的问题。但是它没有达到懒加载的效果，即如果从始至终从未使用过这个实例，会造成资源浪费。</h3><h3 id="ensp-ensp-2-对于饿汉式（静态代码块）：此方法和上例本质相同。"><a href="#ensp-ensp-2-对于饿汉式（静态代码块）：此方法和上例本质相同。" class="headerlink" title="&ensp;&ensp; 2.对于饿汉式（静态代码块）：此方法和上例本质相同。"></a>&ensp;&ensp; 2.对于饿汉式（静态代码块）：此方法和上例本质相同。</h3><h3 id="ensp-ensp-3-对于懒汉式（线程不安全）：这种方法达到了懒加载的效果，但它只能在单线程下使用。如果在多线程下，一个线程进入了if-instance-null-判断语句块，还未来得及往下执行，另一个线程也通过这个判断语句，这时便会产生多个实例，所以在多线程环境下不可使用这种方式。推荐在实际开发中，不要使用这种方式。"><a href="#ensp-ensp-3-对于懒汉式（线程不安全）：这种方法达到了懒加载的效果，但它只能在单线程下使用。如果在多线程下，一个线程进入了if-instance-null-判断语句块，还未来得及往下执行，另一个线程也通过这个判断语句，这时便会产生多个实例，所以在多线程环境下不可使用这种方式。推荐在实际开发中，不要使用这种方式。" class="headerlink" title="&ensp;&ensp; 3.对于懒汉式（线程不安全）：这种方法达到了懒加载的效果，但它只能在单线程下使用。如果在多线程下，一个线程进入了if(instance == null)判断语句块，还未来得及往下执行，另一个线程也通过这个判断语句，这时便会产生多个实例，所以在多线程环境下不可使用这种方式。推荐在实际开发中，不要使用这种方式。"></a>&ensp;&ensp; 3.对于懒汉式（线程不安全）：这种方法达到了懒加载的效果，但它只能在单线程下使用。如果在多线程下，一个线程进入了if(instance == null)判断语句块，还未来得及往下执行，另一个线程也通过这个判断语句，这时便会产生多个实例，所以在多线程环境下不可使用这种方式。推荐在实际开发中，不要使用这种方式。</h3><h3 id="ensp-ensp-4-对于懒汉式（线程安全）：这种方法解决了线程不安全问题，但是效率太低。每个线程在想获得类的实例的时候，执行getInstance-方法，都要进行同步。而其实这个方法只执行一次实例化代码就够了，后面的想获得该类实例，直接return就行了。所以在实际开发中，不推荐使用这种方式。"><a href="#ensp-ensp-4-对于懒汉式（线程安全）：这种方法解决了线程不安全问题，但是效率太低。每个线程在想获得类的实例的时候，执行getInstance-方法，都要进行同步。而其实这个方法只执行一次实例化代码就够了，后面的想获得该类实例，直接return就行了。所以在实际开发中，不推荐使用这种方式。" class="headerlink" title="&ensp;&ensp; 4.对于懒汉式（线程安全）：这种方法解决了线程不安全问题，但是效率太低。每个线程在想获得类的实例的时候，执行getInstance( )方法，都要进行同步。而其实这个方法只执行一次实例化代码就够了，后面的想获得该类实例，直接return就行了。所以在实际开发中，不推荐使用这种方式。"></a>&ensp;&ensp; 4.对于懒汉式（线程安全）：这种方法解决了线程不安全问题，但是效率太低。每个线程在想获得类的实例的时候，执行getInstance( )方法，都要进行同步。而其实这个方法只执行一次实例化代码就够了，后面的想获得该类实例，直接return就行了。所以在实际开发中，不推荐使用这种方式。</h3><h3 id="ensp-ensp-5-对于双重检查：这种方法进行了两次if-instance-null-检查，这样就保证了线程安全。这样实例化代码只用执行一次，后面再次访问时，判断if-instance-null-直接return实例化对象，也避免反复进行代码同步，效率较高。所以在实际开发中，推荐使用这种方法。"><a href="#ensp-ensp-5-对于双重检查：这种方法进行了两次if-instance-null-检查，这样就保证了线程安全。这样实例化代码只用执行一次，后面再次访问时，判断if-instance-null-直接return实例化对象，也避免反复进行代码同步，效率较高。所以在实际开发中，推荐使用这种方法。" class="headerlink" title="&ensp;&ensp; 5.对于双重检查：这种方法进行了两次if(instance == null)检查，这样就保证了线程安全。这样实例化代码只用执行一次，后面再次访问时，判断if(instance == null)直接return实例化对象，也避免反复进行代码同步，效率较高。所以在实际开发中，推荐使用这种方法。"></a>&ensp;&ensp; 5.对于双重检查：这种方法进行了两次if(instance == null)检查，这样就保证了线程安全。这样实例化代码只用执行一次，后面再次访问时，判断if(instance == null)直接return实例化对象，也避免反复进行代码同步，效率较高。所以在实际开发中，推荐使用这种方法。</h3><h3 id="ensp-ensp-6-对于静态内部类：静态内部类在Singleton类被装载时并不会被立即初始化，而是在需要实例化时调用getInstance方法，才会装载Singleton类，从而完成Singleton的实例化，即实现懒加载。线程安全。所以在实际开发中推荐使用。"><a href="#ensp-ensp-6-对于静态内部类：静态内部类在Singleton类被装载时并不会被立即初始化，而是在需要实例化时调用getInstance方法，才会装载Singleton类，从而完成Singleton的实例化，即实现懒加载。线程安全。所以在实际开发中推荐使用。" class="headerlink" title="&ensp;&ensp; 6.对于静态内部类：静态内部类在Singleton类被装载时并不会被立即初始化，而是在需要实例化时调用getInstance方法，才会装载Singleton类，从而完成Singleton的实例化，即实现懒加载。线程安全。所以在实际开发中推荐使用。"></a>&ensp;&ensp; 6.对于静态内部类：静态内部类在Singleton类被装载时并不会被立即初始化，而是在需要实例化时调用getInstance方法，才会装载Singleton类，从而完成Singleton的实例化，即实现懒加载。线程安全。所以在实际开发中推荐使用。</h3><h3 id="ensp-ensp-7-对于枚举：这种方法既能避免多线程同步问题，又能防止反序列化重新创建新的对象。所以在实际开发中，推荐使用。"><a href="#ensp-ensp-7-对于枚举：这种方法既能避免多线程同步问题，又能防止反序列化重新创建新的对象。所以在实际开发中，推荐使用。" class="headerlink" title="&ensp;&ensp; 7.对于枚举：这种方法既能避免多线程同步问题，又能防止反序列化重新创建新的对象。所以在实际开发中，推荐使用。"></a>&ensp;&ensp; 7.对于枚举：这种方法既能避免多线程同步问题，又能防止反序列化重新创建新的对象。所以在实际开发中，推荐使用。</h3>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -188,16 +221,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/09/有关单例模式/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150×150&data=http://jianghongqiang.github.io/2020/03/09/有关单例模式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/08/深度解析volatile关键字/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">深度解析volatile关键字</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -212,143 +304,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-深度解析volatile关键字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/08/深度解析volatile关键字/">深度解析volatile关键字</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/08/深度解析volatile关键字/" class="archive-article-date">
-  	<time datetime="2020-03-08T14:30:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="ensp-ensp-在我们日常开发中，经常会遇到volatile关键字，那么你对这个关键字有了解多少呢？下面我们就以面试官的视角来深度解析下volatile关键字。"><a href="#ensp-ensp-在我们日常开发中，经常会遇到volatile关键字，那么你对这个关键字有了解多少呢？下面我们就以面试官的视角来深度解析下volatile关键字。" class="headerlink" title="&ensp;&ensp; 在我们日常开发中，经常会遇到volatile关键字，那么你对这个关键字有了解多少呢？下面我们就以面试官的视角来深度解析下volatile关键字。"></a>&ensp;&ensp; 在我们日常开发中，经常会遇到<code>volatile</code>关键字，那么你对这个关键字有了解多少呢？下面我们就以面试官的视角来深度解析下<code>volatile</code>关键字。</h3>
-        
-          <a class="article-more-a" href="/2020/03/08/深度解析volatile关键字/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/08/深度解析volatile关键字/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。"><span class="toc-number">1.1.</span> <span class="toc-text">   简单来说，单例模式指某个类只能存在一个对象实例，且该类只提供一个取得其对象实例的方法（静态方法）。它是我们最常见的设计模式，不仅在项目中常见，在找工作的笔试中也频繁出现，现在，我们就来认识一下单例模式。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结："><span class="toc-number">2.</span> <span class="toc-text">总结：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-1-对于饿汉式（静态常量）：这种方法写法简单，在类装载的时候就完成实例化，避免了线程同步的问题。但是它没有达到懒加载的效果，即如果从始至终从未使用过这个实例，会造成资源浪费。"><span class="toc-number">2.1.</span> <span class="toc-text">   1.对于饿汉式（静态常量）：这种方法写法简单，在类装载的时候就完成实例化，避免了线程同步的问题。但是它没有达到懒加载的效果，即如果从始至终从未使用过这个实例，会造成资源浪费。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-2-对于饿汉式（静态代码块）：此方法和上例本质相同。"><span class="toc-number">2.2.</span> <span class="toc-text">   2.对于饿汉式（静态代码块）：此方法和上例本质相同。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-3-对于懒汉式（线程不安全）：这种方法达到了懒加载的效果，但它只能在单线程下使用。如果在多线程下，一个线程进入了if-instance-null-判断语句块，还未来得及往下执行，另一个线程也通过这个判断语句，这时便会产生多个实例，所以在多线程环境下不可使用这种方式。推荐在实际开发中，不要使用这种方式。"><span class="toc-number">2.3.</span> <span class="toc-text">   3.对于懒汉式（线程不安全）：这种方法达到了懒加载的效果，但它只能在单线程下使用。如果在多线程下，一个线程进入了if(instance == null)判断语句块，还未来得及往下执行，另一个线程也通过这个判断语句，这时便会产生多个实例，所以在多线程环境下不可使用这种方式。推荐在实际开发中，不要使用这种方式。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-4-对于懒汉式（线程安全）：这种方法解决了线程不安全问题，但是效率太低。每个线程在想获得类的实例的时候，执行getInstance-方法，都要进行同步。而其实这个方法只执行一次实例化代码就够了，后面的想获得该类实例，直接return就行了。所以在实际开发中，不推荐使用这种方式。"><span class="toc-number">2.4.</span> <span class="toc-text">   4.对于懒汉式（线程安全）：这种方法解决了线程不安全问题，但是效率太低。每个线程在想获得类的实例的时候，执行getInstance( )方法，都要进行同步。而其实这个方法只执行一次实例化代码就够了，后面的想获得该类实例，直接return就行了。所以在实际开发中，不推荐使用这种方式。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-5-对于双重检查：这种方法进行了两次if-instance-null-检查，这样就保证了线程安全。这样实例化代码只用执行一次，后面再次访问时，判断if-instance-null-直接return实例化对象，也避免反复进行代码同步，效率较高。所以在实际开发中，推荐使用这种方法。"><span class="toc-number">2.5.</span> <span class="toc-text">   5.对于双重检查：这种方法进行了两次if(instance == null)检查，这样就保证了线程安全。这样实例化代码只用执行一次，后面再次访问时，判断if(instance == null)直接return实例化对象，也避免反复进行代码同步，效率较高。所以在实际开发中，推荐使用这种方法。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-6-对于静态内部类：静态内部类在Singleton类被装载时并不会被立即初始化，而是在需要实例化时调用getInstance方法，才会装载Singleton类，从而完成Singleton的实例化，即实现懒加载。线程安全。所以在实际开发中推荐使用。"><span class="toc-number">2.6.</span> <span class="toc-text">   6.对于静态内部类：静态内部类在Singleton类被装载时并不会被立即初始化，而是在需要实例化时调用getInstance方法，才会装载Singleton类，从而完成Singleton的实例化，即实现懒加载。线程安全。所以在实际开发中推荐使用。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-7-对于枚举：这种方法既能避免多线程同步问题，又能防止反序列化重新创建新的对象。所以在实际开发中，推荐使用。"><span class="toc-number">2.7.</span> <span class="toc-text">   7.对于枚举：这种方法既能避免多线程同步问题，又能防止反序列化重新创建新的对象。所以在实际开发中，推荐使用。</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-正确书写技术词汇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/30/正确书写技术词汇/">正确书写技术词汇</a>
-    </h1>
   
 
-        
-        <a href="/2019/08/30/正确书写技术词汇/" class="archive-article-date">
-  	<time datetime="2019-08-30T13:05:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="ensp-ensp-当我们在写一份简历的时候，简历上面难免会出现很-多的技术词汇。但是不论个人博客还是个人简历很多人可能都是想当然的凭自己的印象来拼写技术词汇。如果简历上出现了错误的或者不规范的拼写，一定会给面试官留下不好的印象。"><a href="#ensp-ensp-当我们在写一份简历的时候，简历上面难免会出现很-多的技术词汇。但是不论个人博客还是个人简历很多人可能都是想当然的凭自己的印象来拼写技术词汇。如果简历上出现了错误的或者不规范的拼写，一定会给面试官留下不好的印象。" class="headerlink" title="&ensp;&ensp;  当我们在写一份简历的时候，简历上面难免会出现很 多的技术词汇。但是不论个人博客还是个人简历很多人可能都是想当然的凭自己的印象来拼写技术词汇。如果简历上出现了错误的或者不规范的拼写，一定会给面试官留下不好的印象。"></a>&ensp;&ensp;  当我们在写一份简历的时候，简历上面难免会出现很 多的技术词汇。但是不论个人博客还是个人简历很多人可能都是想当然的凭自己的印象来拼写技术词汇。如果简历上出现了错误的或者不规范的拼写，一定会给面试官留下不好的印象。</h3>
-        
-          <a class="article-more-a" href="/2019/08/30/正确书写技术词汇/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/30/正确书写技术词汇/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -371,8 +352,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
