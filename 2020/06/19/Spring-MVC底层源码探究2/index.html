@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/6 | Hexo</title>
+  <title>Spring MVC底层源码探究2 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/06/index.html">
+  <meta name="description" content="一、handle()方法细节&amp;ensp;&amp;ensp; 之前说过，handle()方法的含义是：适配器来执行目标方法，将目标方法执行完后的返回值作为视图名，保存到ModelAndView中。下面我们就来分析handle()方法的细节。&amp;ensp;&amp;ensp; 首先handle()方法内部会最终调用invokeHandlerMethod()方法：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring MVC底层源码探究2">
+<meta property="og:url" content="http://yoursite.com/2020/06/19/Spring-MVC底层源码探究2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、handle()方法细节&amp;ensp;&amp;ensp; 之前说过，handle()方法的含义是：适配器来执行目标方法，将目标方法执行完后的返回值作为视图名，保存到ModelAndView中。下面我们就来分析handle()方法的细节。&amp;ensp;&amp;ensp; 首先handle()方法内部会最终调用invokeHandlerMethod()方法：">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-06-19T06:37:01.755Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Spring MVC底层源码探究2">
+<meta name="twitter:description" content="一、handle()方法细节&amp;ensp;&amp;ensp; 之前说过，handle()方法的含义是：适配器来执行目标方法，将目标方法执行完后的返回值作为视图名，保存到ModelAndView中。下面我们就来分析handle()方法的细节。&amp;ensp;&amp;ensp; 首先handle()方法内部会最终调用invokeHandlerMethod()方法：">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -152,130 +156,185 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Spring-MVC底层源码探究2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Spring MVC底层源码探究2
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/19/Spring-MVC底层源码探究2/" class="archive-article-date">
+
+        
+        <a href="/2020/06/19/Spring-MVC底层源码探究2/" class="archive-article-date">
   	<time datetime="2020-06-19T06:29:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/19/Spring-MVC底层源码探究2/">Spring MVC底层源码探究2</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、handle-方法细节"><a href="#一、handle-方法细节" class="headerlink" title="一、handle()方法细节"></a>一、handle()方法细节</h2><h3 id="ensp-ensp-之前说过，handle-方法的含义是：适配器来执行目标方法，将目标方法执行完后的返回值作为视图名，保存到ModelAndView中。下面我们就来分析handle-方法的细节。"><a href="#ensp-ensp-之前说过，handle-方法的含义是：适配器来执行目标方法，将目标方法执行完后的返回值作为视图名，保存到ModelAndView中。下面我们就来分析handle-方法的细节。" class="headerlink" title="&ensp;&ensp; 之前说过，handle()方法的含义是：适配器来执行目标方法，将目标方法执行完后的返回值作为视图名，保存到ModelAndView中。下面我们就来分析handle()方法的细节。"></a>&ensp;&ensp; 之前说过，handle()方法的含义是：适配器来执行目标方法，将目标方法执行完后的返回值作为视图名，保存到ModelAndView中。下面我们就来分析handle()方法的细节。</h3><h3 id="ensp-ensp-首先handle-方法内部会最终调用invokeHandlerMethod-方法："><a href="#ensp-ensp-首先handle-方法内部会最终调用invokeHandlerMethod-方法：" class="headerlink" title="&ensp;&ensp; 首先handle()方法内部会最终调用invokeHandlerMethod()方法："></a>&ensp;&ensp; 首先handle()方法内部会最终调用invokeHandlerMethod()方法：</h3><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">return invokeHandlerMethod(request,response,handler);</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<h3 id="ensp-ensp-所以分析handle-方法的细节就是分析invokeHandlerMethod-方法："><a href="#ensp-ensp-所以分析handle-方法的细节就是分析invokeHandlerMethod-方法：" class="headerlink" title="&ensp;&ensp; 所以分析handle()方法的细节就是分析invokeHandlerMethod()方法："></a>&ensp;&ensp; 所以分析handle()方法的细节就是分析invokeHandlerMethod()方法：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">protected ModelAndView invokeHandlerMethod(HttpServletRequest request,HttpServletResponse response,Object handler)throws Exception&#123;</span><br><span class="line">  //拿到方法解析器</span><br><span class="line">  ServletHandlerMethodResolver methodResolver = getMethodResolver(handler);</span><br><span class="line">  //方法解析器根据当前请求地址找到真正的目标方法</span><br><span class="line">  Method handlerMethod = methodResolver.resolveHandlerMethod(request);</span><br><span class="line">  //创建一个方法执行器</span><br><span class="line">  ServletHandlerMethodInvoker methodInvoker = new ServletHandlerMethodInvoker(methodResolver);</span><br><span class="line">  //包装原生的request、response</span><br><span class="line">  ServletWebRequest webRequest = new ServletRequest(request,response);</span><br><span class="line">  //创建一个隐含模型</span><br><span class="line">  ExtendedModelMap implicitModel = new BindingAwareModelMap();</span><br><span class="line">  //真正执行目标方法</span><br><span class="line">  Object result = methodInvoker.invokeHandlerMethod(handlerMethod,handler,webRequest,implicitModel);</span><br><span class="line">  //其他代码省略没写</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="ensp-ensp-由此可以看出，在底层真正执行目标方法的是invokeHandlerMethod-方法。下面我们接着分析该方法的执行细节。"><a href="#ensp-ensp-由此可以看出，在底层真正执行目标方法的是invokeHandlerMethod-方法。下面我们接着分析该方法的执行细节。" class="headerlink" title="&ensp;&ensp; 由此可以看出，在底层真正执行目标方法的是invokeHandlerMethod()方法。下面我们接着分析该方法的执行细节。"></a>&ensp;&ensp; 由此可以看出，在底层真正执行目标方法的是invokeHandlerMethod()方法。下面我们接着分析该方法的执行细节。</h3><h2 id="二、invokeHandlerMethod-方法细节"><a href="#二、invokeHandlerMethod-方法细节" class="headerlink" title="二、invokeHandlerMethod()方法细节"></a>二、invokeHandlerMethod()方法细节</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public final Object invokeHandlerMethod(Method handlerMethod,Object handler,NativeWebRequest webRequest,ExtendedModelMap implicitModel)throws Exception&#123;</span><br><span class="line">  Method handlerMethodToInvoke = BridgeMethodResolver.findBridgedMethod(handlerMethod);</span><br><span class="line">  //其他代码省略</span><br><span class="line">  //找到所有@ModelAttribute注解标注的方法</span><br><span class="line">  for(Method attributeMethod:BridgeMethodResolver.findBridgedMethods())&#123;</span><br><span class="line">    Method attributeMethodToInvoke = bridgeMethodResolver.findBridgedMethod(attributeMethod);</span><br><span class="line">    //先确定modelAttribute方法执行时使用的每一个参数的值</span><br><span class="line">    Object[] args = resolveHandlerArguments(attributeMethodToInvoke,handler,webRequest,implicitModel);</span><br><span class="line">    //提前运行modelAttribute方法</span><br><span class="line">    Object attrValue = attributeMethodToInvoke.invoke(handler,args);</span><br><span class="line">    //把提前运行的modelAttribute方法的返回值也放在隐含模型中</span><br><span class="line">    implicitModel.addAttribute(attrName,attrValue);</span><br><span class="line">    //解析目标方法参数是哪些？</span><br><span class="line">    Object[] args = resolveHandlerArguments(handlerMethodToInvoke,handler,webRequest,implicitModel);</span><br><span class="line">    //执行目标方法</span><br><span class="line">    return handlerMethodToInvoke.invoke(handler,args);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、resolveHandlerArguments-方法细节"><a href="#三、resolveHandlerArguments-方法细节" class="headerlink" title="三、resolveHandlerArguments()方法细节"></a>三、resolveHandlerArguments()方法细节</h2><h3 id="ensp-ensp-我们注意到，在确定方法每一个参数值的时候，invokeHandlerMethod-方法在内部调用了一个resolveHandlerArguments方法，下面我们就来具体分析一下这个方法的执行细节："><a href="#ensp-ensp-我们注意到，在确定方法每一个参数值的时候，invokeHandlerMethod-方法在内部调用了一个resolveHandlerArguments方法，下面我们就来具体分析一下这个方法的执行细节：" class="headerlink" title="&ensp;&ensp; 我们注意到，在确定方法每一个参数值的时候，invokeHandlerMethod()方法在内部调用了一个resolveHandlerArguments方法，下面我们就来具体分析一下这个方法的执行细节："></a>&ensp;&ensp; 我们注意到，在确定方法每一个参数值的时候，invokeHandlerMethod()方法在内部调用了一个resolveHandlerArguments方法，下面我们就来具体分析一下这个方法的执行细节：</h3><h3 id="ensp-ensp-1、有注解时：找到目标方法这个参数的所有注解，解析并保存注解的信息，最终得到这个注解对应解析的值。"><a href="#ensp-ensp-1、有注解时：找到目标方法这个参数的所有注解，解析并保存注解的信息，最终得到这个注解对应解析的值。" class="headerlink" title="&ensp;&ensp; 1、有注解时：找到目标方法这个参数的所有注解，解析并保存注解的信息，最终得到这个注解对应解析的值。"></a>&ensp;&ensp; 1、有注解时：找到目标方法这个参数的所有注解，解析并保存注解的信息，最终得到这个注解对应解析的值。</h3><h3 id="ensp-ensp-2、没有注解时：判断是否是普通参数-原生API-、Model或Map、简单类型等。如果是自定义类型："><a href="#ensp-ensp-2、没有注解时：判断是否是普通参数-原生API-、Model或Map、简单类型等。如果是自定义类型：" class="headerlink" title="&ensp;&ensp; 2、没有注解时：判断是否是普通参数(原生API)、Model或Map、简单类型等。如果是自定义类型："></a>&ensp;&ensp; 2、没有注解时：判断是否是普通参数(原生API)、Model或Map、简单类型等。如果是自定义类型：</h3><h3 id="ensp-ensp-2-1、如果隐含模型中有，就从隐含模型中拿；"><a href="#ensp-ensp-2-1、如果隐含模型中有，就从隐含模型中拿；" class="headerlink" title="&ensp;&ensp; 2.1、如果隐含模型中有，就从隐含模型中拿；"></a>&ensp;&ensp; 2.1、如果隐含模型中有，就从隐含模型中拿；</h3><h3 id="ensp-ensp-2-2、如果没有，看是否是-SessionAttributes标注的注解，如果是，就从session中拿，拿不到就抛异常；"><a href="#ensp-ensp-2-2、如果没有，看是否是-SessionAttributes标注的注解，如果是，就从session中拿，拿不到就抛异常；" class="headerlink" title="&ensp;&ensp; 2.2、如果没有，看是否是@SessionAttributes标注的注解，如果是，就从session中拿，拿不到就抛异常；"></a>&ensp;&ensp; 2.2、如果没有，看是否是@SessionAttributes标注的注解，如果是，就从session中拿，拿不到就抛异常；</h3><h3 id="ensp-ensp-2-3、如果都不是，就利用反射创建对象。"><a href="#ensp-ensp-2-3、如果都不是，就利用反射创建对象。" class="headerlink" title="&ensp;&ensp; 2.3、如果都不是，就利用反射创建对象。"></a>&ensp;&ensp; 2.3、如果都不是，就利用反射创建对象。</h3><h2 id="四、processDispatchResult-方法细节"><a href="#四、processDispatchResult-方法细节" class="headerlink" title="四、processDispatchResult()方法细节"></a>四、processDispatchResult()方法细节</h2><h3 id="ensp-ensp-之前我们知道，processDispatchResult-方法的含义是：根据方法最后执行完成后封装的ModelAndView，转发到对应网页，而且ModelAndView中的数据可以从请求域中获取。下面我们就来接着叙述一下该方法的细节："><a href="#ensp-ensp-之前我们知道，processDispatchResult-方法的含义是：根据方法最后执行完成后封装的ModelAndView，转发到对应网页，而且ModelAndView中的数据可以从请求域中获取。下面我们就来接着叙述一下该方法的细节：" class="headerlink" title="&ensp;&ensp; 之前我们知道，processDispatchResult()方法的含义是：根据方法最后执行完成后封装的ModelAndView，转发到对应网页，而且ModelAndView中的数据可以从请求域中获取。下面我们就来接着叙述一下该方法的细节："></a>&ensp;&ensp; 之前我们知道，processDispatchResult()方法的含义是：根据方法最后执行完成后封装的ModelAndView，转发到对应网页，而且ModelAndView中的数据可以从请求域中获取。下面我们就来接着叙述一下该方法的细节：</h3><h3 id="ensp-ensp-目标方法执行完成后，最终都会返回一个ModelAndView对象，视图解析器根据ModelAndView得到视图对象，视图对象才能真正地转发-将模型数据全部放到请求域中-或重定向页面。"><a href="#ensp-ensp-目标方法执行完成后，最终都会返回一个ModelAndView对象，视图解析器根据ModelAndView得到视图对象，视图对象才能真正地转发-将模型数据全部放到请求域中-或重定向页面。" class="headerlink" title="&ensp;&ensp; 目标方法执行完成后，最终都会返回一个ModelAndView对象，视图解析器根据ModelAndView得到视图对象，视图对象才能真正地转发(将模型数据全部放到请求域中)或重定向页面。"></a>&ensp;&ensp; 目标方法执行完成后，最终都会返回一个ModelAndView对象，视图解析器根据ModelAndView得到视图对象，视图对象才能真正地转发(将模型数据全部放到请求域中)或重定向页面。</h3>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150×150&data=http://jianghongqiang.github.io/2020/06/19/Spring-MVC底层源码探究2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/19/Spring-MVC底层源码探究1/" class="archive-article-date">
-  	<time datetime="2020-06-19T02:10:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/19/Spring-MVC底层源码探究1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring MVC底层源码探究1</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/19/Spring-MVC底层源码探究1/">Spring MVC底层源码探究1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、handle-方法细节"><span class="toc-number">1.</span> <span class="toc-text">一、handle()方法细节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-之前说过，handle-方法的含义是：适配器来执行目标方法，将目标方法执行完后的返回值作为视图名，保存到ModelAndView中。下面我们就来分析handle-方法的细节。"><span class="toc-number">1.1.</span> <span class="toc-text">   之前说过，handle()方法的含义是：适配器来执行目标方法，将目标方法执行完后的返回值作为视图名，保存到ModelAndView中。下面我们就来分析handle()方法的细节。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-首先handle-方法内部会最终调用invokeHandlerMethod-方法："><span class="toc-number">1.2.</span> <span class="toc-text">   首先handle()方法内部会最终调用invokeHandlerMethod()方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-所以分析handle-方法的细节就是分析invokeHandlerMethod-方法："><span class="toc-number">1.3.</span> <span class="toc-text">   所以分析handle()方法的细节就是分析invokeHandlerMethod()方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-由此可以看出，在底层真正执行目标方法的是invokeHandlerMethod-方法。下面我们接着分析该方法的执行细节。"><span class="toc-number">1.4.</span> <span class="toc-text">   由此可以看出，在底层真正执行目标方法的是invokeHandlerMethod()方法。下面我们接着分析该方法的执行细节。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、invokeHandlerMethod-方法细节"><span class="toc-number">2.</span> <span class="toc-text">二、invokeHandlerMethod()方法细节</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、resolveHandlerArguments-方法细节"><span class="toc-number">3.</span> <span class="toc-text">三、resolveHandlerArguments()方法细节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-我们注意到，在确定方法每一个参数值的时候，invokeHandlerMethod-方法在内部调用了一个resolveHandlerArguments方法，下面我们就来具体分析一下这个方法的执行细节："><span class="toc-number">3.1.</span> <span class="toc-text">   我们注意到，在确定方法每一个参数值的时候，invokeHandlerMethod()方法在内部调用了一个resolveHandlerArguments方法，下面我们就来具体分析一下这个方法的执行细节：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-1、有注解时：找到目标方法这个参数的所有注解，解析并保存注解的信息，最终得到这个注解对应解析的值。"><span class="toc-number">3.2.</span> <span class="toc-text">   1、有注解时：找到目标方法这个参数的所有注解，解析并保存注解的信息，最终得到这个注解对应解析的值。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-2、没有注解时：判断是否是普通参数-原生API-、Model或Map、简单类型等。如果是自定义类型："><span class="toc-number">3.3.</span> <span class="toc-text">   2、没有注解时：判断是否是普通参数(原生API)、Model或Map、简单类型等。如果是自定义类型：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-2-1、如果隐含模型中有，就从隐含模型中拿；"><span class="toc-number">3.4.</span> <span class="toc-text">   2.1、如果隐含模型中有，就从隐含模型中拿；</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-2-2、如果没有，看是否是-SessionAttributes标注的注解，如果是，就从session中拿，拿不到就抛异常；"><span class="toc-number">3.5.</span> <span class="toc-text">   2.2、如果没有，看是否是@SessionAttributes标注的注解，如果是，就从session中拿，拿不到就抛异常；</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-2-3、如果都不是，就利用反射创建对象。"><span class="toc-number">3.6.</span> <span class="toc-text">   2.3、如果都不是，就利用反射创建对象。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、processDispatchResult-方法细节"><span class="toc-number">4.</span> <span class="toc-text">四、processDispatchResult()方法细节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-之前我们知道，processDispatchResult-方法的含义是：根据方法最后执行完成后封装的ModelAndView，转发到对应网页，而且ModelAndView中的数据可以从请求域中获取。下面我们就来接着叙述一下该方法的细节："><span class="toc-number">4.1.</span> <span class="toc-text">   之前我们知道，processDispatchResult()方法的含义是：根据方法最后执行完成后封装的ModelAndView，转发到对应网页，而且ModelAndView中的数据可以从请求域中获取。下面我们就来接着叙述一下该方法的细节：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ensp-ensp-目标方法执行完成后，最终都会返回一个ModelAndView对象，视图解析器根据ModelAndView得到视图对象，视图对象才能真正地转发-将模型数据全部放到请求域中-或重定向页面。"><span class="toc-number">4.2.</span> <span class="toc-text">   目标方法执行完成后，最终都会返回一个ModelAndView对象，视图解析器根据ModelAndView得到视图对象，视图对象才能真正地转发(将模型数据全部放到请求域中)或重定向页面。</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/17/深度解析ThreadLocal/" class="archive-article-date">
-  	<time datetime="2020-06-17T07:27:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-17</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/17/深度解析ThreadLocal/">深度解析ThreadLocal</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/17/关于网络编程/" class="archive-article-date">
-  	<time datetime="2020-06-17T06:36:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/17/关于网络编程/">关于网络编程</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -298,8 +357,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
